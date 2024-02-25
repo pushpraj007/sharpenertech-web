@@ -1,1 +1,51 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <form onsubmit="handleFormSubmit(event)" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="amount">Expense Amount:</label>
+            <input type="number" class="form-control" id="amount" name="amount" required>
+            <div class="invalid-feedback">Please provide a valid amount.</div>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" name="description" required>
+            <div class="invalid-feedback">Please provide a description.</div>
+        </div>
+        <div class="form-group">
+            <label for="category">Choose a Category:</label>
+            <select class="form-control" id="category" name="category" required>
+                <option value="">Select a category...</option>
+                <option value="movie">Movie</option>
+                <option value="travel">Travel</option>
+                <option value="fashion">Fashion</option>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Expense</button>
+    </form>
+
+    <!-- Unordered List to Display Expenses -->
+    <ul id="listOfItems" class="list-group"></ul>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Your JavaScript file -->
+<script src="index1.js"></script>
+</body>
+</html>
